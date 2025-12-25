@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- javascript
+     ..it is synchronous 
+     -single thread language-executre on eline of the code at a time
+     -each operation waits for the one to complete before executing
+
+     Bolking code --block the flow of program
+                  --read dile sync
+     non-blockring code--do not block executoion 
+                       --rad file Async           
+      -->
+     <!--  -->
+      <h2>Javascript Events</h2>
+</body>
+<script>
+    //! Synchronous
+//? Tasks are done one after another, in order.
+//? The next task waits for the current one to finish.
+// console.log();
+
+// console.log("Task 1");
+// console.log("Task 2");
+// console.log("Task 3");
+
+
+//? ----------------------------------------
+//! Asynchronous
+//? Tasks can run independently.
+//? Next task does not wait for the current one to finish.
+//? Often used for things like API calls, file loading, timers.
+
+
+console.log("Task 1");
+setTimeout(() => {
+  console.log("Task 2");
+}, 1000);
+console.log("Task 3");
+
+
+</script>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121; color:white">
+
+
+</body>
+<script>
+    const div=document.createElement('div')
+    console.log(div);
+    div.className="div1"
+    div.id=Math.round(Math.random()*10+1)  //generatin randpm id
+    div.setAttribute("title","generated title") //add custome attribute ansd id
+    div.style.backgroundColor="green"
+    console.log(div);
+    div.style.padding="12px"
+    // div.innerText="hey,this is created div "  //we cam override the value
+    div.style.display="inline"
+    //or  -> anothe way to add text inside the div using the createTextNode
+    let add=document.createTextNode("chai aur code") //here not override add speratly
+    div.appendChild(add); 
+    console.log(div);
+    document.body.appendChild(div)
+
+</script>
+</html>

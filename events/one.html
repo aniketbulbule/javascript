@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <img src="https://th.bing.com/th/id/OIP.DjJ-ep8WDKBcDxWlF-xAdQAAAA?w=139&h=209&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="samantha ruth prabhu" onclick="alert(`Actress : Samantha Ruth Prabhu`)">
+
+    <br>
+
+    <img  id="pic1" src="https://th.bing.com/th/id/OIP.DjJ-ep8WDKBcDxWlF-xAdQAAAA?w=139&h=209&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="samantha ruth prabhu">
+
+    <br>
+
+    <img  class="pic2" src="https://th.bing.com/th/id/OIP.DjJ-ep8WDKBcDxWlF-xAdQAAAA?w=139&h=209&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="samantha ruth prabhu">
+
+    <br>
+
+    <div class="div1">
+        <img   src="https://th.bing.com/th/id/OIP.DjJ-ep8WDKBcDxWlF-xAdQAAAA?w=139&h=209&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="samantha ruth prabhu">
+
+    <br>
+
+    <img  class="pic4" src="https://th.bing.com/th/id/OIP.DjJ-ep8WDKBcDxWlF-xAdQAAAA?w=139&h=209&c=7&r=0&o=5&dpr=1.2&pid=1.7" alt="samantha ruth prabhu">
+
+    <br>
+
+    <!-- <a class="google" href="https://www.google.com/">Google</a> -->
+    
+    </div>
+
+    <br>
+
+    
+ 
+
+    
+</body>
+
+<script>
+
+    //WE NEED LEARN THIS->
+    //types,timestamp,defaultPrevented=>we can stop default behaviour ex like when we create input when it will submit for that we use this
+    //target,toElement,srcElement,currentTarget,
+    //clientX, clientY ,screenX,screenY
+    //altkey,ctrlkey.shiftkey.keycode
+
+    document.getElementById('pic1').onclick=function(){
+        alert("i am actress 1")
+    }   //its good but giving less feactures  
+
+    document.querySelector('.pic2').addEventListener('click', function(e) {
+    console.log(e);
+    alert("I am actress 2");
+    }, false);
+
+    //addEventListener(): it is very intersting and powerful ,it will lesson many events like keyword , mouse, dragon -drop events or more activities
+    //third parameter if false, is default false, so  need to write
+
+    //attachEvent()
+    //jQuery()- here we use onclick event
+
+    // -----------------------------------
+
+    //Event Propogation /(true/false)
+    //their is two context of event propogation one is event bubbling(false) & event capturing (true) ,in market we use event bubbling(false)
+    //exmples 2
+
+    document.querySelector('.div1').addEventListener('click', function(e) {
+    console.log(e);
+    alert("I am actress 3  ()");
+    }, true);  //false /true
+
+    document.querySelector('.pic2').addEventListener('click', function(e) {
+    console.log(e);
+    e.stopPropagation() //so it wil, stop it will not go to upper
+    alert("I am actress 4");
+    }, true);
+
+
+    // document.getElementsByClassName('.google').addEventListener('click',(e)=>{
+    //     //e-event object
+    //     // e.preventDefault();
+    //     e.stopPropagation()
+    //     console.log("google clicked");
+    // },false)
+
+    
+</script>
+</html>

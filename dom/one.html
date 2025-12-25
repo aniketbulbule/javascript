@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bg-black{
+            background-color: #212121;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-black">
+    <div>
+        <h1 id="title" class="heading">Document Object Model (DOM) <span>test text</span> </h1> 
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+        <!-- <input type="password"> -->
+
+        <ul>
+            <li class="li">one</li>
+            <li class="li">two</li>
+            <li class="li">three</li>
+            <li class="li">five</li>
+        </ul>
+</div>
+    <!-- <script src="one.js"></script> -->
+</body>
+<script>
+let ul=document.querySelector('ul')
+console.log(ul);
+console.log(ul.children);
+// let arr=Array.from(ul)
+// arr.forEach((data)=>console.log(data))
+for(let i=0; i<ul.children.length; i++){
+    console.log(ul.children[i]);
+}
+
+console.log(ul.children.length); //4
+console.log(ul.firstElementChild);
+console.log(ul.lastElementChild);
+
+let c=document.createElement('main')
+console.log(c);
+c.innerText="hello created tag";
+c.style.backgroundColor="red"
+c.style.display="inline"
+c.style.padding="2px 8px"
+
+document.body.appendChild(c)
+
+
+</script>
+</html>

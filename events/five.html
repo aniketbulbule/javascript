@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 🔁 setInterval()
+🔸 It runs the code again and again after a fixed time.
+
+🔸 Keeps running until you stop it.
+
+🔸 Useful for clocks, updating UI, animations, etc. -->
+<!-- 
+🛑 clearTimeout()
+🔸 Stops a scheduled setTimeout() before it happens.
+
+🔸 You need to store the timeout in a variable.
+
+🛑 clearInterval()
+🔸 Stops a repeating setInterval().
+
+🔸 Also needs the interval stored in a variable.
+
+⚡ Extra Tips:
+setTimeout() is like a one-time alarm.
+
+setInterval() is like a repeating alarm clock.
+
+You can stop both if needed using clearTimeout() and clearInterval(). -->
+
+    <h2>javascript Events</h2>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+    //setInterval()
+    // setInterval(function(){
+    //     console.log("Date:"+Date.now());
+    // },1000)
+
+    //--------------
+
+    const sayDate=function(str){
+        console.log(str+" Date:"+Date.now());
+    }
+    let intervalId=setInterval(sayDate,1000,"hii")
+    clearInterval(intervalId)
+</script>
+</html>

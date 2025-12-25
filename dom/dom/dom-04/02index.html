@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- #Diff Bet -->
+<!-- 1. appendChild()
+Adds a child element at the end (last) of the parent element.
+  -->
+<div id="box1">
+  <p>First</p>
+</div>
+
+
+<!-- 2. prepend()
+Adds a child element at the beginning (first) of the parent element.
+Can accept multiple nodes or text.  -->
+
+
+<div id="box2">
+  <p>First</p>
+</div>
+
+</body>
+
+<script>
+let box = document.getElementById("box");
+let newP = document.createElement("p");
+newP.innerText = "Last";
+box.appendChild(newP);
+
+//-------------
+
+let box2 = document.getElementById("box2");
+let newP2 = document.createElement("p");
+newP2.innerText = "Start";
+box.prepend(newP2)
+</script>
+
+</html>

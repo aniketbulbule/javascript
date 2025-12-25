@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #212121; color: white;">
+    <ul class="lang">
+        <li>Javascript</li>
+        <li>Java</li>
+        <li>Html</li>
+        <li>css</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        let li=document.createElement('li')
+        li.innerHTML=`${langName}`
+        document.querySelector('.lang')
+    }
+    addLanguage("Java")
+    // addLanguage("Typescript","pyhton")
+
+    //Optimize way to create and add the element
+    function addOptiLanguage(langName){
+        let li=document.createElement('li');
+        li.appendChild(document.createTextNode(langName))
+        document.querySelector('.lang').appendChild(li)
+    }
+    addOptiLanguage("sql")
+    //edit
+    let secLang=document.querySelector("li:nth-child(2)")
+    console.log(secLang);
+    secLang.innerHTML="hey,Java"
+    
+    //create
+    let newLi=document.createElement('li')
+    console.log(newLi);
+    newLi.textContent="by,java" //it does directly add
+    console.log(newLi);
+
+    //replace eith secLang with newLi using replaceWith
+    secLang.replaceWith(newLi)
+    // one more exampl of edit
+    const flang=document.querySelector("li:first-child")
+    console.log(flang);
+    flang.outerHTML=`<li>typeScript<li/>`  
+    
+    //remove
+    const lastlang=document.querySelector("li:last-child")
+    console.log(lastlang);
+    lastlang.remove()
+    console.log(lastlang);
+    
+    
+</script>
+</html>

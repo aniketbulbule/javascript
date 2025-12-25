@@ -1,0 +1,50 @@
+]<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Actress Gallery</title>
+</head>
+<body>
+  <div class="div1">
+    <div>
+      <img id="pic1" src="https://images.filmibeat.com/webp/img/popcorn/list_items/-20240216100023-7502.jpg" alt="Sree-leela">
+    </div>
+
+    <div>
+      <img id="pic2" src="https://images.filmibeat.com/webp/img/popcorn/list_items/-20240216100130-6070.jpg" alt="Kajal Agrawal">
+    </div>
+
+    <div>
+      <img id="pic3" src="https://images.filmibeat.com/webp/img/popcorn/list_items/-20240216100204-6178.jpg" alt="Tamnaah">
+    </div>
+
+    <div>
+      <img id="pic4" src="https://images.filmibeat.com/webp/img/popcorn/list_items/-20240216101848-4167.jpg" alt="Ashika">
+    </div>
+  </div>
+
+  <script>
+    /// Event delegation: listen on parent, act on child
+    document.querySelector('.div1').addEventListener('click', function(e) {
+    //   console.log(e);
+    //   console.log("Clicked Element:", e.target);
+    //   console.log("Parent to remove:", e.target.parentNode);
+
+    ////removing parent element
+    //   let removeIt = e.target.parentNode;
+    //   removeIt.remove();
+    
+    //OR
+    
+    console.log(e.target.tagName);
+     // Check if clicked element is an image
+      if (e.target.tagName === 'IMG') {
+        console.log("Clicked Image ID:", e.target.id);
+        let removeIt = e.target.parentNode;
+        removeIt.remove();
+      } 
+    });
+  </script>
+</body>
+</html>
